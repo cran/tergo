@@ -12,7 +12,7 @@ style_text(text, configuration = list())
 \item{configuration}{(\code{list}) Configuration for formatting. Default \code{list()}.}
 }
 \value{
-(\code{character}) the text formatted as R code
+(\code{character}) The text formatted as R code.
 }
 \description{
 Style text
@@ -22,9 +22,9 @@ This function is vectorized.
 To see possible configuration options, see \code{\link[=get_default_config]{get_default_config()}}.
 }
 \examples{
-code <- "function(){}"
-style_text(code)
+code <- "a+b"
+styled <- style_text(code)
+code <- c("a+b", "A<-7")
+styled <- style_text(code)
 
-code <- c("function(){}", "A<-7")
-style_text(code)
 }

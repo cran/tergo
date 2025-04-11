@@ -2,15 +2,20 @@
 name = "tergo"
 version = "0.1.2"
 edition = "2021"
+rust-version = "1.65.0"
 
 [lib]
 crate-type = ["staticlib"]
 name = "tergo"
 
 [dependencies]
-tergo-lib = "0.2.8"
-toml = "0.8.19"
-extendr-api = "*"
+tergo-lib = "0.2.9"
+toml = "0.8.20"
+extendr-api = "0.8.0"
 
 [workspace]
 exclude = ["vendor", "repo_vendor"]
+
+[profile.release]
+lto = true
+codegen-units = 1
